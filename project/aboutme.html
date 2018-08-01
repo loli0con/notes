@@ -13,6 +13,7 @@
 	<link href="css/homeReset.css" type="text/css" rel="stylesheet">
 	<link href="css/officalHome.css" type="text/css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="stylesheet" type="text/css" href="css/personhome.css">
 
 </head>
 
@@ -37,12 +38,18 @@
 					<ul class="nav navbar-nav navbar-right">
 						<li> <a class="btn big-login" data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();">登录</a></li>
 						<li><a class="btn big-register" data-toggle="modal" href="javascript:void(0)" onclick="openRegisterModal();">注册</a></li>
-							
+						<li id="account"><a id="accountname" href="" onmouseover="showPromptBox()" onmouseout="closePromptBox()">用户名</a></li>
 					</ul>
 
 				</div>
 				<!--/.nav-collapse -->
- 			
+				<div id="prompt-box" onmouseover="showPromptBox()" onmouseout="closePromptBox()">
+					<!-- <p><a href="personHome.html">个人中心</p> -->
+					<p><a href="personHome.html">我的首页</a></p>	
+					<p><a href="userpanel.html">管理站点</a></p>	
+					<p><a href="#">帮助</a></p>	
+					<p><a href="index.html">退出登录</a></p>
+				</div>
 	</nav>
 
 	<div class="modal fade login" id="loginModal">
@@ -143,6 +150,7 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 
+	<script type="text/javascript" src="js/prompt.js"></script>
 	<script src="js/mooz.scripts.min.js"></script>
 	<script src="js/nav.js"></script>
 </body>
